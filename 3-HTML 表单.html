@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-HTML 表单</title>
+</head>
+<body>
+
+    <form action="">
+        <h6>这里不设置表单数据提交的目标URL</h6>
+        <span>span标签→以下两串代码不一样：</span>
+        <input type="text" placeholder="这是灰色的占位符^▽^"><br><br>
+        <label>这是第一串：</label>
+        <input type="text" value="该值已帮您填好^_^">
+        <br><br>
+
+        <label>你是鼠么属性？单选</label>
+        <input type="radio" name="gender">女
+        <input type="radio" name="gender">男
+        <input type="radio" name="gender">其TA
+        <input type="radio" name="gender">中二病
+    </form><br><br><br>
+    
+    <form>
+        <label for="username">第二串使用了for+id标签：</label>
+        <input type="text" id="username" placeholder="在这打字^▽^"><br><br>
+        <label for="pwd">这里是密文：</label>
+        <input type="password" id="pwd" placeholder="输入加密，小眼睛看^_^">
+        <br><br>
+
+        <label>种类：这是多选</label>
+        <input type="checkbox" name="breed">人
+        <input type="checkbox" name="breed">狗
+        <input type="checkbox" name="breed">猫
+        <br><br>
+
+        <input type="submit" value="上传，但无效点击">
+    </form>
+
+</body>
+</html>
