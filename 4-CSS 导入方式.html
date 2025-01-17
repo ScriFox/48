@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-CSS 导入方式</title>
+
+    <link rel="stylesheet" href="./STYLE.css">
+
+    <style>
+        p {
+            color: rgb(0, 255, 0);
+            font-size: 22px;
+        }
+
+        h2 {
+            color: greenyellow;
+        }
+
+        h3 {
+            color: chocolate;
+        }
+
+        h4 {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>该文档已应用CSS样式，本行是p选择器</p>
+
+    <h2 style="color: blue;">CSS样式嵌入元素标签，应用内联样式</h2>
+    <h2>应用内部样式</h2>
+    <h3>应用外部样式</h3>
+
+    <h3 style="color: brown;">外部样式被内联样式覆盖</h3>
+
+    <h4>外部样式被内部样式覆盖</h4>
+
+</body>
+</html>
