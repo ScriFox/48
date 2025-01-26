@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多个音频控制</title>
+    <style>
+        /* 简单的样式 */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 音频元素，使用 preload="metadata" 可以预先加载音频元数据 -->
+    <audio id="audio1" src="burst-sm-1.mp3" preload="metadata"></audio>
+    <audio id="audio1" src="burst-sm-2.mp3" preload="metadata"></audio>
+    <audio id="audio2" src="crackle1.mp3" preload="metadata"></audio>
+    <audio id="audio2" src="crackle-sm-1.mp3" preload="metadata"></audio>
+    <audio id="audio3" src="lift1.mp3" preload="metadata"></audio>
+    <audio id="audio3" src="lift2.mp3" preload="metadata"></audio>
+    <audio id="audio3" src="lift3.mp3" preload="metadata"></audio>
+    <audio id="audio3" src="burst1.mp3" preload="metadata"></audio>
+    <audio id="audio3" src="burst2.mp3" preload="metadata"></audio>
+
+    <!-- 播放/暂停按钮 -->
+    <button id="playPauseButton">播放</button>
+
+    <script>
+        // 获取所有音频元素
+        const audioElements = document.querySelectorAll('audio');
+        // 获取播放/暂停按钮
+        const playPauseButton = document.getElementById('playPauseButton');
+        // 标记音频是否正在播放
+        let isPlaying = false;
+
+        // 播放或暂停所有音频的函数
+        function playPauseAll() {
+            if (isPlaying) {
+                // 如果正在播放，暂停所有音频
+                audioElements.forEach(audio => audio.pause());
+                playPauseButton.textContent = '播放';
+            } else {
+                // 如果暂停，播放所有音频
+                audioElements.forEach(audio => audio.play());
+                playPauseButton.textContent = '暂停';
+            }
+            // 切换播放状态
+            isPlaying = !isPlaying;
+        }
+
+        // 为按钮添加点击事件监听器
+        playPauseButton.addEventListener('click', playPauseAll);
+    </script>
+</body>
+
+</html>

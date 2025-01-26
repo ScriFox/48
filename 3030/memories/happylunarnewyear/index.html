@@ -22,16 +22,43 @@
 
         h1 {
             position: relative;
-            z-index: 2;
+            z-index: 999;
         }
     </style> -->
+
+    <style>
+        /* 定义音频控制按钮样式 */
+        .play-button {
+            width: 63px;
+            height: 63px;
+            border-radius: 50%;
+            background-color: aqua;
+            color: blue;
+            font-size: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            position: fixed;
+            top: 6%;
+            right: 6%;
+            z-index: 1000;
+        }
+
+        /* 鼠标悬停时改变背景颜色 */
+        .play-button:hover {
+            background-color: rgb(153, 255, 153);
+        }
+    </style>
 
     <title>叮铃铃～30的新年烟花</title>
 </head>
 
 <body>
 
-    <h2 style="position: fixed; top: 6%; left: 30px; width: 200px; height: 35px; z-index: 999;
+    <h2 style="position: fixed; top: 6%; left: 6%; width: 200px; height: 35px; z-index: 999;
     background: transparent; border-radius: 50%; padding: 1.0px; text-align: center;
     text-decoration: none; line-height: 35px; font-size: 22px;
     color: rgb(130, 230, 130); clear: both; margin:auto;">此刻烟花为你绽放</h2>
@@ -60,7 +87,36 @@
     <canvas id="canvas"></canvas>
     <h1>30宝宝，新春快乐！</h1>
 
-    <h2>请看烟花</h2>
+
+    <!-- 烟花喜洋洋播放控制 -->
+    <div class="play-button" id="playButton">
+        <span>点这儿BGM</span></div>
+    <audio id="bgm" preload="auto">
+        <source src="烟花喜洋洋.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // 获取圆形按钮元素
+        const playButton = document.getElementById('playButton');
+        // 获取音频元素
+        const bgm = document.getElementById('bgm');
+        // 获取按钮内的文字元素
+        const buttonText = playButton.querySelector('span');
+
+        // 为按钮添加点击事件监听器
+        playButton.addEventListener('click', function () {
+            if (bgm.paused) {
+                // 如果音频暂停，则播放音频，并更新按钮文字
+                bgm.play();
+                buttonText.textContent = '先不听BGM';
+            } else {
+                // 如果音频正在播放，则暂停音频，并更新按钮文字
+                bgm.pause();
+                buttonText.textContent = '点这儿BGM';
+            }
+        })
+    </script>
+
 
 </body>
 
