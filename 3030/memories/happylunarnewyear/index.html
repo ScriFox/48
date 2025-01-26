@@ -13,7 +13,7 @@
     <!-- 引入外部JavaScript文件
     defer：该脚本会在文档解析完成后以及DOMContentLoaded事件触发前执行，以确保脚本不会阻塞页面渲染 -->
 
-    <style>
+    <!-- <style>
     /* 为 canvas 和 h1 元素设置 position: relative */
         #canvas {
             position: relative;
@@ -24,18 +24,43 @@
             position: relative;
             z-index: 2;
         }
-    </style>
+    </style> -->
 
     <title>叮铃铃～30的新年烟花</title>
 </head>
 
 <body>
 
-      <a href="" class="hide_buttom"
-  style="position: fixed;top: 10%;right: 10px;width: 35px;height: 35px;z-index: 999;background: #696969;border-radius: 50%;padding: 1.0px;text-align: center;color: #ddd;text-decoration: none;   clear: both; line-height: 35px; 	margin:auto;   font-size: 13px;">制作</a>
+    <h2 style="position: fixed; top: 6%; left: 30px; width: 200px; height: 35px; z-index: 999;
+    background: transparent; border-radius: 50%; padding: 1.0px; text-align: center;
+    text-decoration: none; line-height: 35px; font-size: 22px;
+    color: rgb(130, 230, 130); clear: both; margin:auto;">此刻烟花为你绽放</h2>
+    
+    <!-- position: fixed;🦦设置该元素的定位方式为固定位。这意味着无论页面如何滚动，该元素都会固定在浏览器窗口的某个位置
+    top: %;🦦设置元素顶部距离浏览器窗口顶部的距离占窗口高度的百分比
+    left: px;🦦设置元素左侧距离浏览器窗口左侧的像素
+    width: px;🦦设置元素宽度
+    height: px;🦦设置元素高度
+    z-index: 999;🦦设置元素的堆叠顺序。z-index值越高，元素在垂直于屏幕方向上越靠上显示，也就是会覆盖 z-index 值较低的元素。
+                    这里设置为 999，表明该元素会显示在大多数其他元素之上。
+
+    background: transparent;🦦将元素的背景设置为透明
+    border-radius: 50%;🦦把元素的边框圆角半径设置为50%。
+                          如果宽度和高度不相等，元素的实际形状会是椭圆形
+    padding: 1.0px;🦦为元素的内容周围添加 1 像素的内边距
+    text-align: center;🦦让元素内的文本水平居中显示
+
+    text-decoration: none;🦦如果元素存在链接，用于去除链接的下划线
+    line-height: px;🦦设置文本行高
+    font-size: px;🦦将文本字体大小
+
+    clear: both;🦦只用于非固定位元素：元素的左右两侧都不允许有浮动元素，元素会被强制移动到之前所有浮动元素的下方
+    margin: auto;🦦只用于非固定位元素：分别设置元素上右下左四个方向的外边距为自动计算的值 -->
 
     <canvas id="canvas"></canvas>
     <h1>30宝宝，新春快乐！</h1>
+
+    <h2>请看烟花</h2>
 
 </body>
 
