@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-    font-size: 10vw;
+    /* font-size: 10vw; */
     /* 使index.html中h1元素的字体大小设置为视口宽度的10%，字体大小会随着视口宽度的变化而变化，实现响应式设计 */
     animation: zoom 3s linear infinite;
     /* 应用zoom动画，持续时间3秒，动画速度为线性-linear，无限循环播放-infinite */
