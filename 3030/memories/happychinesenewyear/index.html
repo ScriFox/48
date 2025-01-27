@@ -13,19 +13,6 @@
     <!-- 引入外部JavaScript文件
     defer：该脚本会在文档解析完成后以及DOMContentLoaded事件触发前执行，以确保脚本不会阻塞页面渲染 -->
 
-    <!-- <style>
-    /* 为 canvas 和 h1 元素设置 position: relative */
-        #canvas {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            position: relative;
-            z-index: 888;
-        }
-    </style> -->
-
     <style>
         /* 定义音频控制按钮样式 */
         .play-button {
@@ -58,11 +45,18 @@
 
 <body>
 
+
+    <!-- 30_0.1🐶正居中特效文字 CSS+JS -->
+    <canvas id="canvas"></canvas>
+    <h1>30宝宝，新春快乐！</h1>
+
+
+    <!-- 30_0.2🐶【参考注释】左上角固定位文字 -->
     <h2 style="position: fixed; top: 6%; left: 6%; width: 200px; height: 35px; z-index: 999;
     background: transparent; border-radius: 50%; padding: 1.0px; text-align: center;
     text-decoration: none; line-height: 35px; font-size: 22px;
     color: rgb(130, 230, 130); clear: both; margin:auto;">此刻烟花为你绽放<br>
-    <span style="color: rgb(0, 255, 238); font-size: 13px;">↓下滑浏览喔～</span></h2>
+    <span style="color: rgb(0, 255, 238); font-size: 13px;">↓下方还有视频喔～</span></h2>
     
     <!-- position: fixed;🦦设置该元素的定位方式为固定位。这意味着无论页面如何滚动，该元素都会固定在浏览器窗口的某个位置
     top: %;🦦设置元素顶部距离浏览器窗口顶部的距离占窗口高度的百分比
@@ -85,11 +79,8 @@
     clear: both;🦦只用于非固定位元素：元素的左右两侧都不允许有浮动元素，元素会被强制移动到之前所有浮动元素的下方
     margin: auto;🦦只用于非固定位元素：分别设置元素上右下左四个方向的外边距为自动计算的值 -->
 
-    <canvas id="canvas"></canvas>
-    <h1>30宝宝，新春快乐！</h1>
 
-
-    <!-- 烟花喜洋洋播放控制 -->
+    <!-- 30_0.3🐶右上角烟花喜洋洋音频播放控制 HTML -->
     <div class="play-button" id="playButton">
         <span>点这儿BGM</span></div>
     <audio id="bgm" preload="auto">
@@ -118,9 +109,52 @@
         })
     </script>
 
-    <!-- <h3 style="color: #6e34e3;">(*^▽^*)30新年好！！</h3>
-    <h3>你看到的烟花并不是录好的视频哦，是以页面作为绘制的幕布，模拟黑色夜空，先创造随机的烟花对象，烟花升到半空中爆炸后产生粒子，粒子消失前幕布会先画上一层半透明黑，使得粒子呈现拖拽的尾迹。<br>
-        代码会不停生成随机烟花，它们会落在幕布上的任意位置，形成无限循环的随机烟花。</h3><br>
+
+    <!-- 30_0.4🐶右下角文字悬停 -->
+    <div class="button-container">
+        <button class="hover-button">网页简介</button>
+        <div class="hover-text">(*^▽^*)30新年好🎉<br>
+        你看到的烟花并不是录好的视频哦！<br>
+        它是以页面作为绘制的幕布，模拟黑色夜空～<br>
+        先创造随机的烟花对象，烟花升到半空中爆炸后产生粒子，<br>
+        粒子消失前幕布会先画上一层半透明黑，使得粒子呈现拖拽的尾迹。<br><br>
+        代码会不停生成随机烟花，它们会落在幕布上的任意位置。。<br>
+        形成无限循环的随机烟花！！<br><br>
+
+        <span style="color: aqua;">关于视频：<br>
+        想实现声音跟随烟花舞动的效果，但时间非常紧张来不及做了TvT<br>
+        所以用视频呈现好啦～<br>
+        因此视频开头的烟花和烟花绽放后“你的名字”——<br>
+        也是由另一段代码生成的随机效果^_^</span><br><br>
+
+        <span style="color: yellowgreen;">关于配音：<br>
+        收到你翻牌时已经完成录制，来不及重录啦所以～<br>
+        还是小狗蛇点点上吧！</span><br><br>
+
+        刚开始学前端开发非常初级，超简陋哈哈哈但会进步嘟！！<br>
+        感谢收看，新年福至！
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h3 style="color: #6e34e3;"></h3>
 
     <h3>接下来尊嘟是视频：<br>一开始想实现声音跟随烟花舞动的效果，但是时间非常紧张来不及做了，所以用视频呈现好啦～<br>
         ps.视频中的烟花和烟花绽放后“你的名字”是由另一段代码生成的^_^</h3>

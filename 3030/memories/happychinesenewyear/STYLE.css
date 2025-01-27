@@ -39,3 +39,83 @@ span {
 canvas {
     position: fixed;
 }
+
+/* 设置按钮容器的位置 */
+.button-container {
+    position: fixed; /* 固定在页面上 */
+    bottom: 20px;    /* 距离底部 20px */
+    right: 20px;     /* 距离右侧 20px */
+}
+
+/* 按钮样式 */
+.hover-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* 绿色背景 */
+    color: white;              /* 白色文字 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 悬停文字的样式 */
+.hover-text {
+    display: none; /* 默认隐藏 */
+    position: absolute;
+    bottom: 100%;  /* 显示在按钮上方 */
+    right: 0;
+    background-color: #333; /* 深灰色背景 */
+    color: white;          /* 白色文字 */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap; /* 防止文字换行 */
+    margin-bottom: 10px; /* 与按钮的间距 */
+}
+
+/* 鼠标悬停时显示文字 */
+.hover-button:hover + .hover-text {
+    display: block;
+}
+
+
+
+/* 设置按钮容器的位置 */
+.button-container {
+    position: fixed; /* 固定在页面上 */
+    bottom: 20px;    /* 距离底部 20px */
+    right: 20px;     /* 距离右侧 20px */
+}
+
+/* 按钮样式 */
+.hover-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* 绿色背景 */
+    color: white;              /* 白色文字 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* 30_0.4🐶 */
+/* 悬停文字的样式 */
+.hover-text {
+    display: none; /* 默认隐藏 */
+    position: absolute;
+    bottom: 100%;  /* 显示在按钮上方 */
+    right: 0;
+    background-color: #3b3b3b; /* 深灰色背景 */
+    color: white;          /* 白色文字 */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap; /* 防止文字换行 */
+    margin-bottom: 10px; /* 与按钮的间距 */
+}
+
+/* 鼠标悬停时显示文字 */
+.hover-button:hover + .hover-text {
+    display: block;
+}
