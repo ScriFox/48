@@ -198,6 +198,7 @@ const videoButton = document.querySelector('.video-button');
 videoButton.addEventListener('click', () => {
     video.style.display = 'block'; // 显示视频元素
     video.play(); // 播放视频
+    bgm.pause(); // 暂停音乐
 
     // 进入全屏模式
     if (video.requestFullscreen) {
@@ -216,5 +217,7 @@ document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
         video.style.display = 'none'; // 隐藏视频元素
         video.pause(); // 暂停视频
+        bgm.currentTime = bgm.currentTime; // 保持音乐当前播放时间
+        bgm.play(); // 从断点继续播放音乐
     }
 });
