@@ -110,7 +110,7 @@ canvas {
     color: white;
     padding: 10px;
     border-radius: 5px;
-    font-size: 11px;
+    font-size: 9px;
     white-space: nowrap; /* 防止文字换行 */
     margin-bottom: 10px; /* 与按钮的间距 */
     z-index: 1000;
@@ -124,8 +124,6 @@ canvas {
 /* 手机端适配 */
 @media (max-width: 600px) {
     .hover-text {
-        right: 10px; /* 缩小右边距 */
-        left: 10px; /* 增加左边距 */
         bottom: 100px; /* 提高文字容器位置，避免被左下角按钮遮挡 */
         max-width: calc(100% - 20px); /* 宽度适应屏幕 */
         font-size: clamp(14px, 4vw, 18px); /* 手机端字体稍大 */
