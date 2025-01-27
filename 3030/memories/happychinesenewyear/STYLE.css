@@ -110,7 +110,7 @@ canvas {
     color: white;
     padding: 10px;
     border-radius: 5px;
-    font-size: 9px;
+    font-size: 11px;
     white-space: nowrap; /* 防止文字换行 */
     margin-bottom: 10px; /* 与按钮的间距 */
     z-index: 1000;
@@ -122,10 +122,13 @@ canvas {
 }
 
 /* 手机端适配 */
-@media (max-width: 600px) {
+@media (max-width: 300px) {
     .hover-text {
+        right: 10px; /* 距离右边 10px */
+        left: 10px; /* 距离左边 10px */
         bottom: 100px; /* 提高文字容器位置，避免被左下角按钮遮挡 */
         max-width: calc(100% - 20px); /* 宽度适应屏幕 */
+        width: calc(100% - 20px); /* 强制宽度适应屏幕 */
         font-size: clamp(14px, 4vw, 18px); /* 手机端字体稍大 */
     }
 }
@@ -163,6 +166,7 @@ canvas {
     font-size: 22px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* 背景色过渡效果 */
+    z-index: 777;
 }
 
 /* 鼠标悬停时按钮效果 */
