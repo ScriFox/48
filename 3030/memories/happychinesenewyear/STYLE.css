@@ -106,8 +106,8 @@ canvas {
     position: absolute;
     bottom: 100%;  /* 显示在按钮上方 */
     right: 0;
-    background-color: #3b3b3b; /* 深灰色背景 */
-    color: white;          /* 白色文字 */
+    background-color: #3b3b3b;
+    color: white;
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -118,4 +118,31 @@ canvas {
 /* 鼠标悬停时显示文字 */
 .hover-button:hover + .hover-text {
     display: block;
+}
+
+
+/* 30_0.5🐶 */
+/* 设置按钮容器的位置 */
+.video-button-container {
+    position: fixed; /* 固定在页面上 */
+    bottom: 13%;    /* 距离底部 20px */
+    left: 6%;       /* 水平居中 */
+}
+
+/* 按钮样式 */
+.video-button {
+    width: 130px;    /* 按钮宽度 */
+    height: 30px;   /* 按钮高度 */
+    background-color: transparent; /* 按钮背景色 */
+    color: rgb(255, 255, 255);    /* 文字颜色 */
+    border: none;
+    border-radius: 10px; /* 圆角 */
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 背景色过渡效果 */
+}
+
+/* 鼠标悬停时按钮效果 */
+.video-button:hover {
+    background-color: rgb(132, 189, 142); /* 悬停时背景色 */
 }

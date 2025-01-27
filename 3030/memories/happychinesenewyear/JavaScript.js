@@ -187,3 +187,34 @@ function draw() {
 
 // 调用绘制函数，开始动画循环
 draw();
+
+
+// 30_0.5🐶
+// 获取视频和按钮元素
+const video = document.getElementById('fullscreen-video');
+const videoButton = document.querySelector('.video-button');
+
+// 点击按钮时全屏播放视频
+videoButton.addEventListener('click', () => {
+    video.style.display = 'block'; // 显示视频元素
+    video.play(); // 播放视频
+
+    // 进入全屏模式
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) { // Firefox
+        video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { // IE/Edge
+        video.msRequestFullscreen();
+    }
+});
+
+// 退出全屏时隐藏视频
+document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        video.style.display = 'none'; // 隐藏视频元素
+        video.pause(); // 暂停视频
+    }
+});
