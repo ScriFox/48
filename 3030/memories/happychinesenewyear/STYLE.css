@@ -151,7 +151,7 @@ canvas {
 /* 设置按钮容器的位置 */
 .video-button-container {
     position: fixed; /* 固定在页面上 */
-    bottom: 13%;    /* 距离底部 20px */
+    bottom: 6%;    /* 距离底部 20px */
     left: 6%;       /* 水平居中 */
 }
 
