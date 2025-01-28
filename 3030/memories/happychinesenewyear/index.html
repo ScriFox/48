@@ -56,8 +56,7 @@
     <h2 style="position: fixed; top: 6%; left: 6%; width: 200px; height: 35px; z-index: 999;
     background: transparent; border-radius: 50%; padding: 1.0px; text-align: center;
     text-decoration: none; line-height: 35px; font-size: 22px;
-    color: rgb(130, 230, 130); clear: both; margin:auto;">此刻烟花为你绽放<br>
-    <span style="color: rgb(0, 255, 238); font-size: 13px;">↓下方还有视频喔～</span></h2>
+    color: rgb(130, 230, 130); clear: both; margin:auto;">此刻烟花为你绽放</h2>
     
     <!-- position: fixed;🦦设置该元素的定位方式为固定位。这意味着无论页面如何滚动，该元素都会固定在浏览器窗口的某个位置
     top: %;🦦设置元素顶部距离浏览器窗口顶部的距离占窗口高度的百分比
@@ -79,6 +78,25 @@
 
     clear: both;🦦只用于非固定位元素：元素的左右两侧都不允许有浮动元素，元素会被强制移动到之前所有浮动元素的下方
     margin: auto;🦦只用于非固定位元素：分别设置元素上右下左四个方向的外边距为自动计算的值 -->
+
+    <audio id="fireworksAudio" src="此刻烟花为你绽放.mp3" loop></audio>
+
+    <script>
+        // 获取元素
+        const fireworksText = document.querySelector('h2');
+        const fireworksAudio = document.getElementById('fireworksAudio');
+
+        // 添加点击事件
+        fireworksText.addEventListener('click', function () {
+            if (fireworksAudio.paused) {
+                fireworksAudio.play(); // 播放音频
+                fireworksText.textContent = '点击关闭烟花音效';
+            } else {
+                fireworksAudio.pause(); // 暂停音频
+                fireworksText.textContent = '此刻烟花为你绽放';
+            }
+        });
+    </script>
 
 
     <!-- 30_0.3🐶右上角烟花喜洋洋音频播放控制 HTML
