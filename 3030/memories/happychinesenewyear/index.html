@@ -85,16 +85,22 @@
         // 获取元素
         const fireworksText = document.querySelector('h2');
         const fireworksAudio = document.getElementById('fireworksAudio');
-
+    
         // 添加点击事件
         fireworksText.addEventListener('click', function () {
             if (fireworksAudio.paused) {
                 fireworksAudio.play(); // 播放音频
-                fireworksText.textContent = '点击关闭烟花音效';
+                fireworksText.textContent = '烟花绽放中...';
             } else {
                 fireworksAudio.pause(); // 暂停音频
+                fireworksAudio.currentTime = 0; // 重置播放进度
                 fireworksText.textContent = '此刻烟花为你绽放';
             }
+        });
+    
+        // 监听音频播放结束事件
+        fireworksAudio.addEventListener('ended', function () {
+            fireworksText.textContent = '此刻烟花为你绽放'; // 恢复文字内容
         });
     </script>
 
